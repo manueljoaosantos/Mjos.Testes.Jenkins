@@ -18,7 +18,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t thetipMjos.Testes.Jenkinss4you/nodeapp_test:latest .'
+				sh 'docker build -t Mjos.Testes.Jenkins/nodeapp_test:latest .'
 			}
 		}
 
