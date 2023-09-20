@@ -9,11 +9,17 @@ pipeline{
   }
 
 	stages {
-	    
+
+		stage('Test') {
+
+			steps {				
+				sh 'docker info'
+			}
+		}
 
 		stage('Build') {
 
-			steps {
+			steps {				
 				sh 'docker build -t Mjos.Testes.Jenkins/nodeapp_test:latest .'
 			}
 		}
