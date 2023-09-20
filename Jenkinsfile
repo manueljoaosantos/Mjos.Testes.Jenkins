@@ -31,10 +31,17 @@ pipeline{
 			}
 		}
 
+		stage('Tag') {
+
+			steps {
+				sh 'docker tag Mjos.Testes.Jenkins/nodeapp_test:latest mjsantos/teste'
+			}
+		}
+		
 		stage('Push') {
 
 			steps {
-				sh 'docker push Mjos.Testes.Jenkins/nodeapp_test:latest'
+				sh 'docker push mjsantos/teste'
 			}
 		}
 	}
