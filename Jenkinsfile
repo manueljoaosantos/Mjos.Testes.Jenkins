@@ -1,10 +1,12 @@
 pipeline{
 
-	agent {label 'linux'}
-
-	environment {
-		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
-	}
+  agent any
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '5'))
+  }
+  environment {
+    DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+  }
 
 	stages {
 	    
