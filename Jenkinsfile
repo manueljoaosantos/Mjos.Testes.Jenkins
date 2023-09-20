@@ -10,12 +10,6 @@ pipeline{
 
 	stages {
 	    
-	    stage('gitclone') {
-
-			steps {
-				git 'https://github.com/manueljoaosantos/Mjos.Testes.Jenkins.git'
-			}
-		}
 
 		stage('Build') {
 
